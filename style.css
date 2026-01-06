@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background: black;
+}
+
+/* Pages */
+.page {
+  display: none;
+  height: 100vh;
+  padding: 90px 20px;
+  text-align: center;
+  animation: fadeIn 1.6s ease;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Backgrounds */
+.nightblue {
+  background: radial-gradient(circle, #0a1f44, #020814);
+  box-shadow: inset 0 0 120px #1e90ff;
+}
+
+.deepblue {
+  background: radial-gradient(circle, #0f3d66, #041728);
+  box-shadow: inset 0 0 100px #4facfe;
+}
+
+.purplelove {
+  background: radial-gradient(circle, #3a0f5c, #14001f);
+  box-shadow: inset 0 0 120px #c77dff;
+}
+
+.wine {
+  background: radial-gradient(circle, #4a001f, #1a000b);
+  box-shadow: inset 0 0 120px #ff4d6d;
+}
+
+.midnight {
+  background: radial-gradient(circle, #000428, #000000);
+  box-shadow: inset 0 0 120px #7f7fff;
+}
+
+/* Text */
+h1 {
+  font-size: 46px;
+  color: #ffffff;
+}
+
+.text {
+  font-size: 22px;
+  line-height: 1.8;
+  color: #f5f5f5;
+}
+
+.long {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Rainbow text */
+.rainbow {
+  background: linear-gradient(
+    90deg,
+    #ff4d6d,
+    #ff9f1c,
+    #f9f871,
+    #4cd137,
+    #48dbfb,
+    #5f27cd,
+    #ff6bff
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbowMove 5s linear infinite;
+}
+
+@keyframes rainbowMove {
+  from { background-position: 0%; }
+  to { background-position: 100%; }
+}
+
+/* First page name animation */
+.intro-name {
+  font-size: 80px;
+  animation: emerge 3s ease forwards, glow 2s infinite alternate;
+}
+
+@keyframes emerge {
+  from {
+    transform: scale(0.1) rotateY(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.4) rotateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 20px #4facfe; }
+  to { text-shadow: 0 0 45px #a29bfe; }
+}
+
+/* Case file card */
+.case-file {
+  background: rgba(255,255,255,0.12);
+  padding: 35px;
+  border-radius: 22px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 30px rgba(255,77,109,0.6);
+}
+
+.case-text {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.disclaimer {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 15px;
+}
+
+/* Particles */
+.particle {
+  position: fixed;
+  pointer-events: none;
+  animation: float 9s linear forwards;
+  filter: drop-shadow(0 0 6px white);
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Button */
+button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 14px 26px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ff4d6d;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
